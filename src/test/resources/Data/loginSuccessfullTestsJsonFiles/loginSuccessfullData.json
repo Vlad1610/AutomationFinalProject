@@ -1,0 +1,9 @@
+[
+  {
+    "browserName": "edge",
+    "usernameJs": "constantin_vlad1998@yahoo.com",
+    "passwordJs": "Vlad@12345@",
+    "loginErrorJs": "ERROR: Google reCAPTCHA verification failed.",
+    "successfulLoginMsgJs": "Bună constantin_vlad1998 (nu ești constantin_vlad1998? Dezautentifică-te)"
+  }
+]

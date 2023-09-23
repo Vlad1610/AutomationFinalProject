@@ -1,0 +1,12 @@
+[
+  {
+    "browserName": "chrome",
+    "searchKeyWord" : "motocicleta",
+    "noMatchSearchError" : "Nu a fost găsit niciun produs care să se potrivească cu selecția ta."
+  },
+  {
+    "browserName": "edge",
+    "searchKeyWord" : "chiuveta",
+    "noMatchSearchError" : "Nu a fost găsit niciun produs care să se potrivească cu selecția ta."
+  }
+]

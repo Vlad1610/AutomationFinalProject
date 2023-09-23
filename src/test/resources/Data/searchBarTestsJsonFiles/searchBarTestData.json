@@ -1,0 +1,12 @@
+[
+  {
+    "browserName": "chrome",
+    "searchKeyWord" : "",
+    "noMatchSearchError" : ""
+  },
+  {
+    "browserName": "firefox",
+    "searchKeyWord" : "royal",
+    "noMatchSearchError" : ""
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "browserName": "chrome",
+    "registerEmailInput": "",
+    "absentEmailError": "Eroare: Te rog introdu o adresă de email validă.",
+    "successRegistrationMessage": ""
+  },
+  {
+    "browserName": "edge",
+    "registerEmailInput": "vlad1239@yahoo.com",
+    "absentEmailError": "",
+    "successRegistrationMessage": "Bună vlad1239 (nu ești vlad1239? Dezautentifică-te)"
+  }
+]

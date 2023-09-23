@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e34db753-390f-432e-a98c-6651b99d0446" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RegressionTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmokeTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CustomExceptions/ProductNotAddedToCartException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CustomExceptions/ProductNotAddedToWishListException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/CartModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModelForJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/RegistrationModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/SearchBarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/WishListModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/FavouritesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/RegistrationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/SearchBarPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ShopPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchBarTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/ShoppingCartTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/WishListTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/BrowserUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ConfigUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ConstantUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/Tools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/cartTestsJsonFiles/cartMessageTestData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/cartTestsJsonFiles/cartRemoveItemMessage.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/loginSuccessfullTestsJsonFiles/loginSuccessfullData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/registrationTestsJsonFiles/testRegistrationData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/registrationTestsJsonFiles/testRegistrationEmailUsedData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/searchBarTestsJsonFiles/searchBarNoMatchData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/searchBarTestsJsonFiles/searchBarTestData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/wishListTestsJsonFiles/favouritesItemsRemovedData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/wishListTestsJsonFiles/favouritesTestData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Drivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Drivers/geckodriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Drivers/msedgedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2VbYFyHx8kIwsD6Niqbg87g5UhN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/AutomationProject&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Projects/AutomationProject/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\AutomationProject\src\test\resources\Data\loginSuccessfullTestsJsonFiles" />
+      <recent name="D:\Projects\AutomationProject\src\test\resources\Data\registrationTestsJsonFiles" />
+      <recent name="D:\Projects\AutomationProject\src\test\resources\Data\searchBarTestsJsonFiles" />
+      <recent name="D:\Projects\AutomationProject\src\test\resources\Data\wishListTestsJsonFiles" />
+      <recent name="D:\Projects\AutomationProject\src\test\resources\Data\cartTestsJsonFiles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.LoginTests.loginWithLoginModel">
+    <configuration name="D:/Projects/AutomationProject/RegressionTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationProject" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/RegressionTests.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.login" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginTests" />
+      <option name="METHOD_NAME" value="login" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.loginWithLoginModel" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginTests" />
+      <option name="METHOD_NAME" value="loginWithLoginModel" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.successfulLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginTests" />
+      <option name="METHOD_NAME" value="successfulLoginTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchBarTests.searchBarTestEmptyAndMatch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchBarTests" />
+      <option name="METHOD_NAME" value="searchBarTestEmptyAndMatch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.LoginTests.loginWithLoginModel" />
+        <item itemvalue="TestNG.LoginTests.successfulLoginTest" />
+        <item itemvalue="TestNG.LoginTests.login" />
+        <item itemvalue="TestNG.SearchBarTests.searchBarTestEmptyAndMatch" />
+        <item itemvalue="TestNG.D:/Projects/AutomationProject/RegressionTests.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e34db753-390f-432e-a98c-6651b99d0446" name="Changes" comment="" />
+      <created>1695106154181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695106154181</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

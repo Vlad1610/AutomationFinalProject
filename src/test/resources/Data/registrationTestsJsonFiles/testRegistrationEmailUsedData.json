@@ -1,0 +1,7 @@
+[
+  {
+    "browserName": "firefox",
+    "registerEmailInput": "constantin_vlad1998@yahoo.com",
+    "emailAlreadyRegisteredError": "Eroare: Este înregistrat deja un cont cu adresa ta de email. Te rog autentifică-te."
+  }
+]
