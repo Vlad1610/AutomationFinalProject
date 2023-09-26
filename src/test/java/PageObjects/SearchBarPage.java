@@ -16,7 +16,6 @@ public class SearchBarPage {
     WebDriver driver;
     WebDriverWait wait;
     Actions actions;
-    JavaScriptExecutor js = (JavaScriptExecutor) driver;
     @FindBy(xpath = "//*[@class='widget woocommerce widget_product_search']//input[1]")
     private WebElement searchBarElement;
 
@@ -25,16 +24,13 @@ public class SearchBarPage {
 
     //search parameter royal
     @FindBy(xpath = "//*[@class='product-name']/a[@href='https://animalutulmeu.ro/produse/royal-canin-light-weight-care-plic-85g/']")
-    private WebElement firstVisibleSearchElement;
+    private WebElement searchElement;
+
+    @FindBy(xpath = "//div[@class='summary entry-summary single-product-info']/h1")
+    private WebElement searchElementTitle;
 
     @FindBy(xpath = "//*[@class='woocommerce add_to_cart_inline']/a[@href='?add-to-cart=7771']")
     private WebElement goToFirstItem;
-
-    @FindBy(xpath = "//*[@class='product-name']/a[@href='https://animalutulmeu.ro/produse/royal-canin-hypoallergenic-puppy-3-5kg/']")
-    private WebElement secondVisibleSearchElement;
-
-    @FindBy(xpath = "//*[@class='woocommerce add_to_cart_inline']/a[@href='?add-to-cart=7682']")
-    private WebElement goToSecondItem;
 
     @FindBy(xpath = "//*[@class='woocommerce-info']")
     private WebElement noMatchSearchMessage;
@@ -53,29 +49,25 @@ public class SearchBarPage {
         searchExecuteBtn.click();
     }
 
-    public String firstVisibleSearchEl() {
-        try{
-            return firstVisibleSearchElement.getText();
-        }catch (NoSuchElementException ex) {
-            return "";
-        }
-    }
-    public void moveToFirstEl() {
-        actions.scrollToElement(goToFirstItem).perform();
-        wait.until(ExpectedConditions.visibilityOf(goToFirstItem));
+    public void goToSearchVisibleElement() {
+        actions.scrollToElement(searchElement);
+        wait.until(ExpectedConditions.visibilityOf(searchElement));
+        searchElement.click();
     }
 
-    public String secondVisibleSearchEl() {
-        try{
-            return secondVisibleSearchElement.getText();
-        }catch (NoSuchElementException ex) {
+    public boolean isSearchElementVisible() {
+        actions.scrollToElement(searchElement);
+        wait.until(ExpectedConditions.visibilityOf(searchElement));
+        return searchElement.isDisplayed();
+    }
+    public String searchElementTitle() {
+        try {
+            return searchElementTitle.getText();
+        } catch (NoSuchElementException ex) {
             return "";
         }
     }
-    public void moveToSecondElement() {
-        actions.moveToElement(goToSecondItem);
-        wait.until(ExpectedConditions.visibilityOf(goToSecondItem));
-    }
+
     public String noMatchSearchMess() {
         try{
             return noMatchSearchMessage.getText();

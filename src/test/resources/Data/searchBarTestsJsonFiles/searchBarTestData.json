@@ -2,11 +2,13 @@
   {
     "browserName": "chrome",
     "searchKeyWord" : "",
-    "noMatchSearchError" : ""
+    "noMatchSearchError" : "",
+    "searchVisibleElement" : "Royal Canin Light Weight Care Plic 85g"
   },
   {
-    "browserName": "firefox",
+    "browserName": "edge",
     "searchKeyWord" : "royal",
-    "noMatchSearchError" : ""
+    "noMatchSearchError" : "",
+    "searchVisibleElement" : "Royal Canin Light Weight Care Plic 85g"
   }
 ]

@@ -10,19 +10,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class SearchBarModel {
     private String browserName;
     private String searchKeyWord;
-    private String firstVisibleElement;
-    private String secondVisibleElement;
+    private String searchVisibleElement;
     private String noMatchSearchError;
 
     @JsonCreator
     public SearchBarModel(@JsonProperty("browserName") String browserName,
-                          @JsonProperty("product") String searchKeyWord, @JsonProperty("firstVisibleElement") String firstVisibleElement,
-                          @JsonProperty("secondVisibleElement") String secondVisibleElement,
+                          @JsonProperty("product") String searchKeyWord, @JsonProperty("searchVisibleElement") String firstVisibleElement,
                           @JsonProperty("noMatchMessage") String noMatchSearchError) {
         this.browserName = browserName;
         this.searchKeyWord = searchKeyWord;
-        this.firstVisibleElement = firstVisibleElement;
-        this.secondVisibleElement = secondVisibleElement;
+        this.searchVisibleElement = firstVisibleElement;
         this.noMatchSearchError = noMatchSearchError;
     }
     public String getBrowserName() {
@@ -31,39 +28,20 @@ public class SearchBarModel {
     public String getSearchKeyWord() {
         return searchKeyWord;
     }
-    @XmlElement
-    public void setSearchKeyWord(String searchKeyWord) {
-        this.searchKeyWord = searchKeyWord;
-    }
-    public String getFirstVisibleElement() {
-        return firstVisibleElement;
-    }
-    @XmlElement
-    public void setFirstVisibleElement(String firstVisibleElement) {
-        this.firstVisibleElement = firstVisibleElement;
-    }
-    public String getSecondVisibleElement() {
-        return secondVisibleElement;
-    }
-    @XmlElement
-    public void setSecondVisibleElement(String secondVisibleElement) {
-        this.secondVisibleElement = secondVisibleElement;
+
+    public String getSearchVisibleElement() {
+        return searchVisibleElement;
     }
 
     public String getNoMatchSearchError() {
         return noMatchSearchError;
-    }
-    @XmlElement
-    public void setNoMatchSearchError(String noMatchSearchError) {
-        this.noMatchSearchError = noMatchSearchError;
     }
 
     @Override
     public String toString() {
         return "SerachBar Data{" +
                 "searchKeyWord used: " + searchKeyWord +
-                "}, firstVisibleElement= '" + firstVisibleElement + '\'' +
-                ", secondVisibleElement= '" + secondVisibleElement + '\'' +
+                "}, firstVisibleElement= '" + searchVisibleElement + '\'' +
                 ", noMatchSearchError= '" + noMatchSearchError + '\'' +
                 '}';
     }

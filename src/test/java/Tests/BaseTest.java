@@ -10,7 +10,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
@@ -19,7 +18,6 @@ public class BaseTest {
 
     public WebDriver driver;
 
-//    private WebDriver chromeDriver;
     String baseUrl;
     String dbHostname, dbPort, dbUser, dbPassword, dbSchema;
 

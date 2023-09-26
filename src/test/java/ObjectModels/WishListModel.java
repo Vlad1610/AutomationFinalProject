@@ -31,34 +31,23 @@ public class WishListModel {
     public String getBrowserName() {
         return browserName;
     }
+
     public String getFirstFavItem() {
         return firstFavItem;
     }
-    @XmlElement
-    public void setFirstFavItem(String firstFavItem) {
-        this.firstFavItem = firstFavItem;
-    }
+
     public String getSecondFavItem() {
         return secondFavItem;
     }
-    @XmlElement
-    public void setSecondFavItem(String secondFavItem) {
-        this.secondFavItem = secondFavItem;
-    }
+
     public String getItemRemovedMessage() {
         return itemRemovedMessage;
     }
-    @XmlElement
-    public void setItemRemovedMessage(String itemRemovedMessage) {
-        this.itemRemovedMessage = itemRemovedMessage;
-    }
+
     public String getEmptyCartMessage() {
         return emptyCartMessage;
     }
-    @XmlElement
-    public void setEmptyCartMessage(String emptyCartMessage) {
-        this.emptyCartMessage = emptyCartMessage;
-    }
+
     @Override
     public String toString() {
         return "WishList Data{" +

@@ -52,7 +52,7 @@ public class ShoppingCartTests extends BaseTest {
 
     //Test to see if both items are added to cart
     @Test(dataProvider = "jsonCartAddItemsDp")
-    public void addToCartTest(CartModel cm) throws ProductNotAddedToCartException {
+    public void addItemsToCartTest(CartModel cm) throws ProductNotAddedToCartException {
         setUpDriver(cm.getBrowserName());
         cartModelcm(cm);
     }
@@ -63,6 +63,7 @@ public class ShoppingCartTests extends BaseTest {
     }
 
     private void cart(String browserName, String productOneName, String productTwoName) throws ProductNotAddedToCartException {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Product added to cart: " + productOneName + " and " + productTwoName);
 
         cartPage = new CartPage(driver);
@@ -72,11 +73,10 @@ public class ShoppingCartTests extends BaseTest {
         registrationPage.acceptCookies();
         shopPage.goToShop();
         shopPage.buyBothItemsGoToCart();
-        driver.navigate().refresh();
         cartPage.scrollToSecondItem();
 
-        Assert.assertEquals(cartPage.getFirstItemTitle(), productOneName);
-        Assert.assertEquals(cartPage.getSecondItemTitle(), productTwoName);
+        Assert.assertEquals(productOneName, cartPage.getFirstItemTitle());
+        Assert.assertEquals(productTwoName, cartPage.getSecondItemTitle());
     }
 
     //Test to see if the remove from cart function works
@@ -95,6 +95,7 @@ public class ShoppingCartTests extends BaseTest {
     private void cartRemoveOneItem(String browserName, String productOneName, String productTwoName,
                                    String itemRemovedCartMsg,
                                    String emptyCartMsg) throws ProductNotAddedToCartException, InterruptedException {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Product added to cart: " + productOneName);
 
         cartPage = new CartPage(driver);
@@ -104,11 +105,10 @@ public class ShoppingCartTests extends BaseTest {
         registrationPage.acceptCookies();
         shopPage.goToShop();
         shopPage.buyItemOneGoToCart();
-        driver.navigate().refresh();
         cartPage.removeItemFromCart();
 
-        Assert.assertEquals(cartPage.getRemoveItemMessage(), itemRemovedCartMsg);
-        Assert.assertEquals(cartPage.getEmptyCartMessage(),emptyCartMsg);
+        Assert.assertEquals(itemRemovedCartMsg, cartPage.getRemoveItemMessage());
+        Assert.assertEquals(emptyCartMsg, cartPage.getEmptyCartMessage());
     }
 }
 

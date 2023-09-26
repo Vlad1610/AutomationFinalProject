@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name=" Regression Tests: Testing the Shopping Cart, WishList and Search function">
-    <test name="Regression">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+        <listener class-name="org.testng.reporters.EmailableReporter2"></listener>
+    </listeners>
+    <test name="Regression tests for Shopping Cart and WishList functions">
         <classes>
             <class name="Tests.ShoppingCartTests"/>
             <class name="Tests.WishListTests"/>

@@ -4,7 +4,6 @@ import ObjectModels.SearchBarModel;
 import PageObjects.RegistrationPage;
 import PageObjects.SearchBarPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import org.junit.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +15,6 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public class SearchBarTests extends BaseTest{
-    String browser = "chrome";
     SearchBarPage searchBarPage;
     RegistrationPage registrationpage;
 
@@ -52,7 +50,7 @@ public class SearchBarTests extends BaseTest{
 
     //Test the search function with empty parameter and a parameter that matches the products the site has
     @Test(dataProvider = "jsonSearchEmptyAndMatchDp")
-    public void searchBarTestEmptyAndMatch(SearchBarModel sbm) {
+    public void searchBarUsingEmptyAndMatchInputsTest(SearchBarModel sbm) {
         setUpDriver(sbm.getBrowserName());
         searchBarModelMatchsb(sbm);
     }
@@ -60,13 +58,12 @@ public class SearchBarTests extends BaseTest{
     private void searchBarModelMatchsb(SearchBarModel sbm) {
         System.out.println(sbm);
         searchBar(sbm.getBrowserName(), sbm.getSearchKeyWord(),
-                sbm.getFirstVisibleElement(), sbm.getSecondVisibleElement(),
-                sbm.getNoMatchSearchError());
+                sbm.getSearchVisibleElement());
     }
 
     private void searchBar(String browserName,
-                           String productName, String firstVisibleMatch, String secondVisibleMatch,
-                           String noMatchMsg) {
+                           String productName, String searchVisibleMatch) {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Search element: " + productName);
 
         searchBarPage = new SearchBarPage(driver);
@@ -74,19 +71,19 @@ public class SearchBarTests extends BaseTest{
 
         registrationpage.acceptCookies();
         searchBarPage.search(productName);
-        searchBarPage.moveToFirstEl();
 
-        Assert.assertEquals(searchBarPage.noMatchSearchMess(),noMatchMsg);
-        Assert.assertFalse(searchBarPage.firstVisibleSearchEl().isEmpty());
+       searchBarPage.goToSearchVisibleElement();
+       Assert.assertEquals(searchBarPage.searchElementTitle(),searchVisibleMatch);
 
-        searchBarPage.moveToSecondElement();
-        Assert.assertFalse(searchBarPage.secondVisibleSearchEl().isEmpty());
+        //We can use this asserts to check that the element we searched is displayed in page
+//        Assert.assertTrue("The element we searched is visible", searchBarPage.isSearchElementVisible());
+
     }
 
 
     //test the search function with a not matching parameter
     @Test(dataProvider = "jsonSearchNoMatchDp")
-    public void searchBarTestNoMatch(SearchBarModel sbNom) {
+    public void searchBarTestUsingNoMatchInputsTest(SearchBarModel sbNom) {
         setUpDriver(sbNom.getBrowserName());
         searchBarModelNoMatchsb(sbNom);
     }
@@ -97,6 +94,7 @@ public class SearchBarTests extends BaseTest{
     }
 
     private void searchBarNoMatch(String browserName, String productName, String noMatchMsg) {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Search element: " + productName);
 
         searchBarPage = new SearchBarPage(driver);
@@ -105,6 +103,6 @@ public class SearchBarTests extends BaseTest{
         registrationpage.acceptCookies();
         searchBarPage.search(productName);
 
-        Assert.assertEquals(searchBarPage.noMatchSearchMess(),noMatchMsg);
+        Assert.assertEquals(noMatchMsg, searchBarPage.noMatchSearchMess());
     }
 }

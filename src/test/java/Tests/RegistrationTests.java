@@ -20,7 +20,7 @@ public class RegistrationTests extends BaseTest {
     RegistrationPage registrationPage;
     LoginPage loginPage;
 
-    @DataProvider (name = "jsonRegAbsentSuccessDp")
+    @DataProvider (name = "jsonRegAbsentEmailDp")
     public Iterator<Object[]> jsonRegDpCollection() throws IOException {
         Collection<Object[]> dp = new ArrayList<>();
 
@@ -31,6 +31,20 @@ public class RegistrationTests extends BaseTest {
 
         for (RegistrationModel rm: rms)
             dp.add(new Object[]{rm});
+        return dp.iterator();
+    }
+
+    @DataProvider (name = "jsonRegSuccessDp")
+    public Iterator<Object[]> jsonSuccessDpCollection() throws IOException {
+        Collection<Object[]> dp = new ArrayList<>();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        File file = new File("src/test/resources/Data/registrationTestsJsonFiles/successRegistrationTestData.json");
+
+        RegistrationModel[] rss = objectMapper.readValue(file, RegistrationModel[].class);
+
+        for (RegistrationModel rs: rss)
+            dp.add(new Object[]{rs});
         return dp.iterator();
     }
 
@@ -49,8 +63,8 @@ public class RegistrationTests extends BaseTest {
     }
 
     //Test registration with empty email and the successful registration
-    @Test(dataProvider = "jsonRegAbsentSuccessDp")
-    public void registerAbsentAndSuccessTest(RegistrationModel rm) {
+    @Test(dataProvider = "jsonRegAbsentEmailDp")
+    public void registerUsingEmptyEmailTest(RegistrationModel rm) {
         setUpDriver(rm.getBrowserName());
         registrationRm(rm);
     }
@@ -61,8 +75,9 @@ public class RegistrationTests extends BaseTest {
                 rm.getSuccessRegistrationMessage());
     }
 
-    private void registration(String brwserName, String registerEmail, String absentEmailErr,
+    private void registration(String browserName, String registerEmail, String absentEmailErr,
                               String successRegisterMsg) {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Try to register using email: " + registerEmail);
 
         loginPage = new LoginPage(driver);
@@ -73,14 +88,13 @@ public class RegistrationTests extends BaseTest {
         registrationPage.register(registerEmail);
 
         System.out.println("Registration finished, verify message");
-        Assert.assertEquals(registrationPage.getAbsentEmailError(), absentEmailErr);
-        Assert.assertEquals(registrationPage.getSuccessfulRegisterMessage(), successRegisterMsg);
+        Assert.assertEquals(absentEmailErr, registrationPage.getAbsentEmailError());
+        Assert.assertEquals(successRegisterMsg, registrationPage.getSuccessfulRegisterMessage());
     }
-
 
     //test registration with already used email
     @Test(dataProvider = "jsonRegEUsedDp")
-    public void registerAlreadyUsedEmail(RegistrationModel rmUsed) {
+    public void registerUsingAlreadyUsedEmailTest(RegistrationModel rmUsed) {
         setUpDriver(rmUsed.getBrowserName());
         registrationEUsed(rmUsed);
     }
@@ -91,6 +105,7 @@ public class RegistrationTests extends BaseTest {
     }
 
     private void registrationUsedEmail(String browserName, String registerEmail, String emailAlreadyRegisteredError) {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Try to register using email: " + registerEmail);
 
         loginPage = new LoginPage(driver);
@@ -101,6 +116,35 @@ public class RegistrationTests extends BaseTest {
         registrationPage.register(registerEmail);
 
         System.out.println("Registration finished, verify message");
-        Assert.assertEquals(registrationPage.getEmailAlreadyRegisteredError(), emailAlreadyRegisteredError);
+        Assert.assertEquals(emailAlreadyRegisteredError, registrationPage.getEmailAlreadyRegisteredError());
+    }
+
+    @Test(dataProvider = "jsonRegSuccessDp")
+    public void registerUsingValidEmailTest(RegistrationModel rs) {
+        setUpDriver(rs.getBrowserName());
+        registrationRm(rs);
+    }
+
+    private void registrationRs(RegistrationModel rs) {
+        System.out.println(rs);
+        registrationRs(rs.getBrowserName(), rs.getRegisterEmailInput(), rs.getAbsentEmailError(),
+                rs.getSuccessRegistrationMessage());
+    }
+
+    private void registrationRs(String browserName, String registerEmail, String absentEmailErr,
+                              String successRegisterMsg) {
+        System.out.println("Browser used: " + browserName);
+        System.out.println("Try to register using email: " + registerEmail);
+
+        loginPage = new LoginPage(driver);
+        registrationPage = new RegistrationPage(driver);
+
+        registrationPage.acceptCookies();
+        loginPage.createAccount();
+        registrationPage.register(registerEmail);
+
+        System.out.println("Registration finished, verify message");
+        Assert.assertEquals(absentEmailErr, registrationPage.getAbsentEmailError());
+        Assert.assertEquals(successRegisterMsg, registrationPage.getSuccessfulRegisterMessage());
     }
 }

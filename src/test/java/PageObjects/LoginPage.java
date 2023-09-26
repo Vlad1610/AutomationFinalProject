@@ -87,6 +87,14 @@ public class LoginPage {
         }
     }
 
+    public String getSuccessLoginMsg() {
+        try {
+            return loginErrorElement.getText();
+        } catch (NoSuchElementException ex) {
+            return "";
+        }
+    }
+
     public void goToMyAccount() {
         wait.until(ExpectedConditions.visibilityOf(myAccountButton));
         myAccountButton.click();

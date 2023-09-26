@@ -56,14 +56,6 @@ public class CartPage {
         }
     }
 
-    public void removeSecondItem() {
-        actions.scrollToElement(removeSecondItemBtn).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(removeFirstItemBtn));
-        removeSecondItemBtn.click();
-        actions.scrollToElement(emptyCartMessage).perform();
-        wait.until(ExpectedConditions.visibilityOf(emptyCartMessage));
-    }
-
     public void scrollToSecondItem() throws ProductNotAddedToCartException {
         try {
             actions.scrollToElement(firstItemTitle).perform();

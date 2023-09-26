@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login Tests">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+        <listener class-name="org.testng.reporters.EmailableReporter2"></listener>
+    </listeners>
+    <test name="Testing the Login function using empty, invalid and valid parameters.">
+        <classes>
+            <class name="Tests.LoginTests"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

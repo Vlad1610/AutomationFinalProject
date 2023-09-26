@@ -2,7 +2,7 @@ package Tests;
 
 import CustomExceptions.ProductNotAddedToWishListException;
 import ObjectModels.WishListModel;
-import PageObjects.FavouritesPage;
+import PageObjects.WishListPage;
 import PageObjects.RegistrationPage;
 import PageObjects.ShopPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,7 +17,7 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public class WishListTests extends BaseTest{
-    FavouritesPage favouritesPage;
+    WishListPage wishListPage;
     ShopPage shopPage;
     RegistrationPage registrationPage;
     @DataProvider(name = "jsonAddFavDp")
@@ -49,31 +49,31 @@ public class WishListTests extends BaseTest{
     }
 
     @Test(dataProvider = "jsonAddFavDp")
-    public void checkIfItemsAreAddedToWishListTest(WishListModel wm) throws ProductNotAddedToWishListException {
+    public void addItemsToWishListTest(WishListModel wm) throws ProductNotAddedToWishListException {
         setUpDriver(wm.getBrowserName());
         wishListWlm(wm);
     }
 
     private void wishListWlm(WishListModel wm) throws ProductNotAddedToWishListException {
         System.out.println(wm);
-        wishList(wm.getFirstFavItem(), wm.getSecondFavItem());
+        wishList(wm.getBrowserName(), wm.getFirstFavItem(), wm.getSecondFavItem());
     }
 
-    private void wishList(String favItemOne, String favItemTwo) throws ProductNotAddedToWishListException {
+    private void wishList(String browserName, String favItemOne, String favItemTwo) throws ProductNotAddedToWishListException {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Added to favourites: " + favItemOne + " and " + favItemTwo);
 
-        favouritesPage = new FavouritesPage(driver);
+        wishListPage = new WishListPage(driver);
         shopPage = new ShopPage(driver);
         registrationPage = new RegistrationPage(driver);
 
         registrationPage.acceptCookies();
         shopPage.addToWishListTwoItems();
         shopPage.goToFavourites();
-        driver.navigate().refresh();
-        favouritesPage.scrollToSecondItem();
+        wishListPage.scrollToSecondItem();
 
-        Assert.assertEquals(favouritesPage.getFirstFavItemName(), favItemOne);
-        Assert.assertEquals(favouritesPage.getSecondFavItemName(), favItemTwo);
+        Assert.assertEquals(favItemOne, wishListPage.getFirstFavItemName());
+        Assert.assertEquals(favItemTwo, wishListPage.getSecondFavItemName());
     }
 
     @Test(dataProvider = "jsonRemoveFavDp")
@@ -89,20 +89,20 @@ public class WishListTests extends BaseTest{
     }
 
     private void wishList(String browserName, String favItemOne, String favItemTwo, String itemRemovedMsg, String emptyWishListMsg) throws ProductNotAddedToWishListException {
+        System.out.println("Browser used: " + browserName);
         System.out.println("Added to favourites: " + favItemOne + " and " + favItemTwo);
 
-        favouritesPage = new FavouritesPage(driver);
+        wishListPage = new WishListPage(driver);
         shopPage = new ShopPage(driver);
         registrationPage = new RegistrationPage(driver);
 
         registrationPage.acceptCookies();
         shopPage.addOneItemToWishList();
         shopPage.goToFavourites();
-        driver.navigate().refresh();
 
-        favouritesPage.removeFirstFavItem();
+        wishListPage.removeFirstFavItem();
 
-        Assert.assertEquals(favouritesPage.favItemRemovedMessage(), itemRemovedMsg);
-        Assert.assertEquals(favouritesPage.noFavItemsMessage(), emptyWishListMsg);
+        Assert.assertEquals(itemRemovedMsg, wishListPage.favItemRemovedMessage());
+        Assert.assertEquals(emptyWishListMsg, wishListPage.noFavItemsMessage());
     }
 }

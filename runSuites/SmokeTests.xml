@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Smoke Testing the following features: Registration and Login">
-    <test name="Regression">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+        <listener class-name="org.testng.reporters.EmailableReporter2"></listener>
+    </listeners>
+    <test name="Smoke tests for the Registration and Login functions.">
         <classes>
             <class name="Tests.RegistrationTests"/>
             <class name="Tests.LoginTests"/>

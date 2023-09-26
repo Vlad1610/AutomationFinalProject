@@ -32,30 +32,17 @@ public class RegistrationModel {
     public String getRegisterEmailInput() {
         return registerEmailInput;
     }
-    @XmlElement
-    public void setRegisterEmailInput(String registerEmailInput) {
-        this.registerEmailInput = registerEmailInput;
-    }
+
     public String getAbsentEmailError() {
         return absentEmailError;
     }
-    @XmlElement
-    public void setAbsentEmailError(String absentEmailError) {
-        this.absentEmailError = absentEmailError;
-    }
+
     public String getEmailAlreadyRegisteredError() {
         return emailAlreadyRegisteredError;
     }
-    @XmlElement
-    public void setEmailAlreadyRegisteredError(String emailAlreadyRegisteredError) {
-        this.emailAlreadyRegisteredError = emailAlreadyRegisteredError;
-    }
+
     public String getSuccessRegistrationMessage() {
         return successRegistrationMessage;
-    }
-    @XmlElement
-    public void setSuccessRegistrationMessage(String successRegistrationMessage) {
-        this.successRegistrationMessage = successRegistrationMessage;
     }
 
     @Override

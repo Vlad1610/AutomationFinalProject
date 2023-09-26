@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class FavouritesPage {
+public class WishListPage {
     WebDriver driver;
     WebDriverWait wait;
     Actions actions;
@@ -36,7 +36,7 @@ public class FavouritesPage {
     private WebElement noItemsInFavouritesMessage;
 
 
-    public FavouritesPage(WebDriver driver) {
+    public WishListPage(WebDriver driver) {
         this.actions = new Actions(driver);
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));

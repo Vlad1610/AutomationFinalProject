@@ -32,31 +32,17 @@ public class CartModel {
     public String getProductOneName() {
         return productOneName;
     }
-    @XmlElement
-    public void setProductOneName(String productOneName) {
-        this.productOneName = productOneName;
-    }
+
     public String getProductTwoName() {
         return productTwoName;
     }
-    @XmlElement
-    public void setProductTwoName(String productTwoName) {
-        this.productTwoName = productTwoName;
-    }
+
     public String getItemRemovedFromCartMsg() {
         return itemRemovedFromCartMsg;
-    }
-    @XmlElement
-    public void setItemRemovedFromCartMsg(String itemRemovedFromCartMsg) {
-        this.itemRemovedFromCartMsg = itemRemovedFromCartMsg;
     }
 
     public String getEmptyCartMsg() {
         return emptyCartMsg;
-    }
-    @XmlElement
-    public void setEmptyCartMsg(String emptyCartMsg) {
-        this.emptyCartMsg = emptyCartMsg;
     }
 
     @Override
