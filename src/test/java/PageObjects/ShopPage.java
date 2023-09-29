@@ -67,21 +67,6 @@ public class ShopPage {
         shopBtn.click();
     }
 
-    public void buyItemOneGoToCart() throws InterruptedException {
-        actions.scrollToElement(buyBtnProductOne).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(buyBtnProductOne));
-        buyBtnProductOne.click();
-        actions.scrollToElement(goToCartBtn).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(goToCartBtn));
-        Thread.sleep(2000);
-        goToCartBtn.click();
-    }
-
-    public void goToCart() {
-        wait.until(ExpectedConditions.elementToBeClickable(goToCartBtn));
-        goToCartBtn.click();
-    }
-
     public void buyBothItemsGoToCart() {
         actions.scrollToElement(buyBtnProductOne).perform();
         wait.until(ExpectedConditions.elementToBeClickable(buyBtnProductOne));

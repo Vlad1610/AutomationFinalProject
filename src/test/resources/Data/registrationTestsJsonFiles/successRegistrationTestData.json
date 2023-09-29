@@ -1,8 +1,8 @@
 [
   {
     "browserName": "edge",
-    "registerEmailInput": "vlad1242@yahoo.com",
+    "registerEmailInput": "vlad1245@yahoo.com",
     "absentEmailError": "",
-    "successRegistrationMessage": "Bună vlad1242 (nu ești vlad1242? Dezautentifică-te)"
+    "successRegistrationMessage": "Bună vlad1245 (nu ești vlad1245? Dezautentifică-te)"
   }
 ]

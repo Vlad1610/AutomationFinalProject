@@ -40,4 +40,13 @@ public class LoginModelForJson {
     public String getSuccessfulLoginMsgJs() {
         return successfulLoginMsgJs;
     }
+
+    @Override
+    public String toString() {
+        return "Login Data{" +
+                "account={username: " + usernameJs + ", password: " + passwordJs +
+                "}, login Error= '" + loginErrorJs + '\'' +
+                "}, successful Login Message= '" + successfulLoginMsgJs + '\'' +
+                '}';
+    }
 }

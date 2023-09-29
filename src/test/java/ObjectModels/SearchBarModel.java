@@ -3,7 +3,6 @@ package ObjectModels;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -39,10 +38,10 @@ public class SearchBarModel {
 
     @Override
     public String toString() {
-        return "SerachBar Data{" +
-                "searchKeyWord used: " + searchKeyWord +
-                "}, firstVisibleElement= '" + searchVisibleElement + '\'' +
-                ", noMatchSearchError= '" + noMatchSearchError + '\'' +
+        return "Search Bar Data{" +
+                "search Key Word used: " + searchKeyWord +
+                "}, first Visible Element= '" + searchVisibleElement + '\'' +
+                ", no Match Search Error= '" + noMatchSearchError + '\'' +
                 '}';
     }
 }

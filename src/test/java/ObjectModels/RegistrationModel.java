@@ -3,7 +3,6 @@ package ObjectModels;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -16,7 +15,8 @@ public class RegistrationModel {
 
     @JsonCreator()
     public RegistrationModel(@JsonProperty("browserName") String browserName,
-                             @JsonProperty("registerEmailInput") String registerEmailInput, @JsonProperty("absentEmailError") String absentEmailError, @JsonProperty("emailAlreadyRegisteredError") String emailAlreadyRegisteredError,
+                             @JsonProperty("registerEmailInput") String registerEmailInput, @JsonProperty("absentEmailError") String absentEmailError,
+                             @JsonProperty("emailAlreadyRegisteredError") String emailAlreadyRegisteredError,
                             @JsonProperty("successRegistrationMessage") String successRegistrationMessage) {
 
         this.browserName = browserName;
@@ -49,9 +49,9 @@ public class RegistrationModel {
     public String toString() {
         return "Registration Data{" +
                 "email used: " + registerEmailInput +
-                "}, absentEmailError= '" + absentEmailError + '\'' +
-                ", emailAlreadyRegisteredError= '" + emailAlreadyRegisteredError + '\'' +
-                ", successRegisterMessage= '" + successRegistrationMessage + '\'' +
+                "}, absent Email Error= '" + absentEmailError + '\'' +
+                ", email Already Registered Error= '" + emailAlreadyRegisteredError + '\'' +
+                ", success Registration Message= '" + successRegistrationMessage + '\'' +
                 '}';
     }
 }

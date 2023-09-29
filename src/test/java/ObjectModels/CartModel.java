@@ -3,7 +3,6 @@ package ObjectModels;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -48,9 +47,9 @@ public class CartModel {
     @Override
     public String toString() {
         return "Cart Data{" +
-                "productOne: " + productOneName + ", productTwo: " + productTwoName +
-                ", itemRemovedFromCartMsg= '" + itemRemovedFromCartMsg + '\'' +
-                ", emptyCartMsg= '" + emptyCartMsg + '\'' +
+                "product One: " + productOneName + ", product Two: " + productTwoName +
+                ", item Removed From Cart Message= '" + itemRemovedFromCartMsg + '\'' +
+                ", empty Cart Message= '" + emptyCartMsg + '\'' +
                 '}';
     }
 

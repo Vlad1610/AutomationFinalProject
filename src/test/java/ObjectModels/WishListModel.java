@@ -3,7 +3,6 @@ package ObjectModels;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -51,9 +50,9 @@ public class WishListModel {
     @Override
     public String toString() {
         return "WishList Data{" +
-                "firstFavItem: " + firstFavItem + ", secondFavItem: " + secondFavItem +
-                "}, itemRemovedMessage= '" + itemRemovedMessage + '\'' +
-                ", emptyCartMessage= '" + emptyCartMessage + '\'' +
+                "first favourite element: " + firstFavItem + ", second favourite element: " + secondFavItem +
+                "}, item Removed from Wish List Message= '" + itemRemovedMessage + '\'' +
+                ", empty Cart Message= '" + emptyCartMessage + '\'' +
                 '}';
     }
 

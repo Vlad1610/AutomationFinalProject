@@ -29,7 +29,7 @@ public class LoginModel {
     public String toString() {
         return "Login Data{" +
                 "account={username: " + username + ", password: " + password +
-                "}, loginError= '" + loginError + '\'' +
+                "}, login Error= '" + loginError + '\'' +
                 '}';
     }
 }

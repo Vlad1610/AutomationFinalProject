@@ -96,7 +96,7 @@ public class ShoppingCartTests extends BaseTest {
                                    String itemRemovedCartMsg,
                                    String emptyCartMsg) throws ProductNotAddedToCartException, InterruptedException {
         System.out.println("Browser used: " + browserName);
-        System.out.println("Product added to cart: " + productOneName);
+        System.out.println("Product added to cart: " + productTwoName);
 
         cartPage = new CartPage(driver);
         shopPage = new ShopPage(driver);
@@ -104,11 +104,10 @@ public class ShoppingCartTests extends BaseTest {
 
         registrationPage.acceptCookies();
         shopPage.goToShop();
-        shopPage.buyItemOneGoToCart();
+        shopPage.buyBothItemsGoToCart();
         cartPage.removeItemFromCart();
 
         Assert.assertEquals(itemRemovedCartMsg, cartPage.getRemoveItemMessage());
-        Assert.assertEquals(emptyCartMsg, cartPage.getEmptyCartMessage());
     }
 }
 

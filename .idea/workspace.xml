@@ -5,34 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e34db753-390f-432e-a98c-6651b99d0446" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/runSuites/LoginTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runSuites/RegistrationTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runSuites/SearchBarTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runSuites/ShoppingCartTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runSuites/WishListTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/loginSuccessfullTestsJsonFiles/loginValidCredentialsFailTestData.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/registrationTestsJsonFiles/successRegistrationTestData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RegressionTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runSuites/RegressionTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmokeTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runSuites/SmokeTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/CartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/CartModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModelForJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/LoginModelForJson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/RegistrationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/RegistrationModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/SearchBarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/SearchBarModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ObjectModels/WishListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ObjectModels/WishListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/FavouritesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/WishListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/SearchBarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/SearchBarPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SearchBarTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchBarTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/ShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ShopPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ShoppingCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ShoppingCartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/WishListTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/WishListTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Data/cartTestsJsonFiles/cartRemoveItemMessage.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Data/cartTestsJsonFiles/cartRemoveItemMessage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Data/registrationTestsJsonFiles/testRegistrationData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Data/registrationTestsJsonFiles/testRegistrationData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Data/searchBarTestsJsonFiles/searchBarTestData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Data/searchBarTestsJsonFiles/searchBarTestData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Data/registrationTestsJsonFiles/successRegistrationTestData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Data/registrationTestsJsonFiles/successRegistrationTestData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +53,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Projects/AutmationCourse",
-    "onboarding.tips.debug.path": "D:/Projects/AutomationProject/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/AutmationCourse&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Projects/AutomationProject/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\AutomationProject\runSuites" />
@@ -92,17 +75,7 @@
       <recent name="D:\Projects\AutomationProject\src\test\resources\Data\wishListTestsJsonFiles" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchBarTests.searchBarUsingEmptyAndMatchInputsTest">
-    <configuration name="D:/Projects/AutomationProject/runSuites/LoginTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationProject" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/runSuites/LoginTests.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.D:/Projects/AutomationProject/runSuites/WishListTests.xml">
     <configuration name="D:/Projects/AutomationProject/runSuites/RegistrationTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/runSuites/RegistrationTests.xml" />
@@ -133,7 +106,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchBarTests.searchBarUsingEmptyAndMatchInputsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/Projects/AutomationProject/runSuites/WishListTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationProject" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/runSuites/WishListTests.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingCartTests.removeItemFromCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationProject" />
       <extension name="coverage">
         <pattern>
@@ -142,8 +125,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.SearchBarTests" />
-      <option name="METHOD_NAME" value="searchBarUsingEmptyAndMatchInputsTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ShoppingCartTests" />
+      <option name="METHOD_NAME" value="removeItemFromCartTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -152,19 +135,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/LoginTests.xml" />
+      <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/ShoppingCartTests.xml" />
+      <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/WishListTests.xml" />
+      <item itemvalue="TestNG.ShoppingCartTests.removeItemFromCartTest" />
       <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/RegistrationTests.xml" />
       <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/SearchBarTests.xml" />
-      <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/ShoppingCartTests.xml" />
-      <item itemvalue="TestNG.SearchBarTests.searchBarUsingEmptyAndMatchInputsTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchBarTests.searchBarUsingEmptyAndMatchInputsTest" />
-        <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/LoginTests.xml" />
-        <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/RegistrationTests.xml" />
-        <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/SearchBarTests.xml" />
+        <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/WishListTests.xml" />
         <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/ShoppingCartTests.xml" />
+        <item itemvalue="TestNG.ShoppingCartTests.removeItemFromCartTest" />
+        <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/SearchBarTests.xml" />
+        <item itemvalue="TestNG.D:/Projects/AutomationProject/runSuites/RegistrationTests.xml" />
       </list>
     </recent_temporary>
   </component>
