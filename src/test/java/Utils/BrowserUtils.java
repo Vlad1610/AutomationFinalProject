@@ -17,8 +17,6 @@ public class BrowserUtils {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = getChromeOptions();
                 driver = new ChromeDriver(chromeOptions);
-                // replaced by chrome options version
-//                driver.manage().window().maximize();
                 return driver;
             }
             case ("firefox"): {
@@ -51,7 +49,6 @@ public class BrowserUtils {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("incognito");
-//        chromeOptions.addArguments("--headless");
         return chromeOptions;
     }
 }

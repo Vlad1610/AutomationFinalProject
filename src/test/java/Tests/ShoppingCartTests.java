@@ -106,8 +106,8 @@ public class ShoppingCartTests extends BaseTest {
         shopPage.goToShop();
         shopPage.buyBothItemsGoToCart();
         cartPage.removeItemFromCart();
-
-        Assert.assertEquals(itemRemovedCartMsg, cartPage.getRemoveItemMessage());
+        cartPage.removeItemFromCart();
+        Assert.assertEquals(emptyCartMsg, cartPage.getEmptyCartMessage());
     }
 }
 

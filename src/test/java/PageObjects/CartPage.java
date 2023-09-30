@@ -52,7 +52,7 @@ public class CartPage {
             actions.scrollToElement(itemRemovedMessage).perform();
             wait.until(ExpectedConditions.visibilityOf(itemRemovedMessage));
         } catch (Exception e) {
-            throw new ProductNotAddedToCartException("The product was not added to cart.");
+            throw new ProductNotAddedToCartException("One product was not added to cart.");
         }
     }
 

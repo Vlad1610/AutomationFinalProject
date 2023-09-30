@@ -5,7 +5,7 @@
         <listener class-name="org.testng.reporters.EmailableReporter"></listener>
         <listener class-name="org.testng.reporters.EmailableReporter2"></listener>
     </listeners>
-    <test name="Testing the Login function using empty, invalid and valid parameters.">
+    <test name="Login tests suite">
         <classes>
             <class name="Tests.LoginTests"/>
         </classes>

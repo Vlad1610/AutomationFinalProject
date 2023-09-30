@@ -74,10 +74,6 @@ public class SearchBarTests extends BaseTest{
 
        searchBarPage.goToSearchVisibleElement();
        Assert.assertEquals(searchBarPage.searchElementTitle(),searchVisibleMatch);
-
-        //We can use this asserts to check that the element we searched is displayed in page
-//        Assert.assertTrue("The element we searched is visible", searchBarPage.isSearchElementVisible());
-
     }
 
 

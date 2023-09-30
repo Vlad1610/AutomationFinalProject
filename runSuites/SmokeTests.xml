@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Smoke Testing the following features: Registration and Login">
+<suite name="Smoke Testing">
     <listeners>
         <listener class-name="org.testng.reporters.EmailableReporter"></listener>
         <listener class-name="org.testng.reporters.EmailableReporter2"></listener>
     </listeners>
-    <test name="Smoke tests for the Registration and Login functions.">
+    <test name="Smoke tests">
         <classes>
-            <class name="Tests.RegistrationTests"/>
-            <class name="Tests.LoginTests"/>
+            <class name="Tests.RegistrationTests">
+                <methods>
+                    <include name="registerUsingValidEmailTest"/>
+                </methods>
+            </class>
+            <class name="Tests.LoginTests">
+                <methods>
+                    <include name="validCredentialsRetryLoginTest"/>
+                </methods>
+            </class>
+            <class name="Tests.SearchBarTests">
+                <methods>
+                    <include name="searchBarUsingEmptyAndMatchInputsTest"/>
+                </methods>
+            </class>
+            <class name="Tests.WishListTests">
+                <methods>
+                    <include name="addItemsToWishListTest"/>
+                </methods>
+            </class>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -7,6 +7,8 @@
     </listeners>
     <test name="Regression tests for Shopping Cart and WishList functions">
         <classes>
+            <class name="Tests.LoginTests"/>
+            <class name="Tests.RegistrationTests"/>
             <class name="Tests.ShoppingCartTests"/>
             <class name="Tests.WishListTests"/>
             <class name="Tests.SearchBarTests"/>

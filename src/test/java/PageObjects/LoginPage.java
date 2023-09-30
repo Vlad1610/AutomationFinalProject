@@ -107,8 +107,4 @@ public class LoginPage {
             return "";
         }
     }
-
-    public void goToRegistrationPage() {
-        createAccBtn.click();
-    }
 }

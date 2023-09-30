@@ -34,16 +34,13 @@ public class BaseTest {
 
     public void setUpDriver(String browserName) {
         if(Objects.equals(browserName, ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "browser"))) {
-            System.setProperty("webdriver.chrome.driver",
-                    "src/test/resources/Drivers/chromedriver.exe");
+
             driver = new ChromeDriver();
         } else if (Objects.equals(browserName, ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "edgeBrowser"))){
-            System.setProperty("webdriver.edge.driver",
-                    "src/test/resources/Drivers/msedgedriver.exe");
+
             driver = new EdgeDriver();
         } else if (Objects.equals(browserName, ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "firefoxBrowser"))){
-            System.setProperty("webdriver.firefox.driver",
-                    "src/test/resources/Drivers/geckodriver.exe");
+
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
 
@@ -54,19 +51,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://animalutulmeu.ro/farmacie/");
-
-//        String browser = browserName;
-//        if (browser.isEmpty())
-//            browser = ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "browser");
-//        System.out.println("Set up webdriver for browser:" + browser);
-//        driver = BrowserUtils.getBrowser(browser);
     }
-
-//    public void startBrowser() {
-//        String browserName = ConfigUtils.getGenericElement(ConstantUtils.CONFIG_FILE, "browser");
-//        setUpDriver(browserName);
-////        driver.get(baseUrl);
-//    }
 
     @AfterMethod(alwaysRun = true)
     public void cleanUp() {
